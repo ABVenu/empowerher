@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        padding: 20px;
+      }
+      #pagebtn {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #pagebtn button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 0 10px;
+        border-radius: 5px;
+      }
+      #pagebtn button:hover {
+        background-color: #0056b3;
+      }
+      select {
+        padding: 10px;
+        margin-right: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      #cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+      #cont > div {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      #cont img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #555;
+      }
+      h4 span {
+        font-weight: bold;
+      }
+      .no-items {
+        text-align: center;
+        font-size: 18px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pagebtn">
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+    <div style="text-align: center; margin-bottom: 20px">
+      <select name="" id="sortbyprice">
+        <option value="">Sort By Price</option>
+        <option value="htl">High to Low</option>
+        <option value="lth">Low to High</option>
+      </select>
+      <select name="" id="sortbyname">
+        <option value="">Sort By Name</option>
+        <option value="atoz">A to Z</option>
+        <option value="ztoa">Z to A</option>
+      </select>
+      <select name="" id="filterbyprice">
+        <option value="">Filter By Price</option>
+        <option value="100">< $100</option>
+        <option value="100-500">$101 - $500</option>
+        <option value="500">> $500</option>
+      </select>
+    </div>
+    <div id="cont" class="no-items">Loading products...</div>
+
+    <script>
+      let dataToBeDisplayed = [];
+      let currentPage = 0;
+      let itemsPerPage = 3;
+
+      window.onload = async () => {
+        let data = await getData();
+        dataToBeDisplayed = [...data];
+        displayData(dataToBeDisplayed);
+      };
+
+      let next = document.getElementById("next");
+      next.addEventListener("click", function () {
+        currentPage++;
+        updatePagination();
+      });
+
+      let prev = document.getElementById("prev");
+      prev.addEventListener("click", function () {
+        if (currentPage > 0) {
+          currentPage--;
+          updatePagination();
+        }
+      });
+
+      async function getData() {
+        try {
+          let res = await fetch("https://fakestoreapi.com/products");
+          let data = await res.json();
+          return data;
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      function updatePagination() {
+        let startIndex = currentPage * itemsPerPage;
+        let endIndex = startIndex + itemsPerPage;
+        displayData(dataToBeDisplayed.slice(startIndex, endIndex));
+      }
+
+      function displayData(arr) {
+        let cont = document.getElementById("cont");
+        cont.innerHTML = "";
+
+        if (arr.length === 0) {
+          cont.innerHTML = '<p class="no-items">No items found</p>';
+          return;
+        }
+
+        let displayArr = arr.map((el) => {
+          let card = `<div>
+                <img src=${el.image} />
+                <h4><span>Name:</span> ${el.title}</h4>
+                <h4><span>Price:</span> $${el.price}</h4>
+            </div>`;
+          return card;
+        });
+
+        cont.innerHTML = displayArr.join("");
+      }
+
+      let sortbyprice = document.getElementById("sortbyprice");
+      sortbyprice.addEventListener("change", function () {
+        if (sortbyprice.value == "htl") {
+          dataToBeDisplayed.sort((a, b) => b.price - a.price);
+          displayData(dataToBeDisplayed);
+        } else {
+          dataToBeDisplayed.sort((a, b) => a.price - b.price);
+          displayData(dataToBeDisplayed);
+        }
+      });
+
+      let sortbyname = document.getElementById("sortbyname");
+      sortbyname.addEventListener("change", function () {
+        if (sortbyname.value == "atoz") {
+          dataToBeDisplayed.sort((a, b) => (a.title > b.title ? 1 : -1));
+        } else {
+          dataToBeDisplayed.sort((a, b) => (a.title < b.title ? 1 : -1));
+        }
+        displayData(dataToBeDisplayed);
+      });
+
+      let filterbyPrice = document.getElementById("filterbyprice");
+      filterbyPrice.addEventListener("change", function () {
+        let filteredData;
+        if (filterbyPrice.value == "100") {
+          filteredData = dataToBeDisplayed.filter((el) => el.price < 100);
+        } else if (filterbyPrice.value == "100-500") {
+          filteredData = dataToBeDisplayed.filter(
+            (el) => el.price >= 100 && el.price <= 500
+          );
+        } else {
+          filteredData = dataToBeDisplayed.filter((el) => el.price > 500);
+        }
+        dataToBeDisplayed = [...filteredData];
+        displayData(dataToBeDisplayed);
+      });
+    </script>
+  </body>
+</html>
