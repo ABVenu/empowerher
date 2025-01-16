@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <h2>Please Signup....</h2>
+      <input id="name" type="text" placeholder="Enter Name" />
+      <input id="password" type="password" placeholder="Enter password" />
+      <input type="submit" value="Signup" />
+    </form>
+  </body>
+  <script>
+    let form = document.getElementById("form");
+    form.addEventListener("submit", () => {
+      event.preventDefault();
+      let name = form.name.value;
+      let password = form.password.value;
+
+      let userObj = { name, password };
+
+      /// send this data to backend
+
+      fetch("http://localhost:8080/users/signup", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(userObj),
+      })
+        .then((res) => {
+          console.log("res from backend", res);
+          alert("hi")
+        })
+        .catch((err) => {
+          console.log("err from backend", err);
+          alert("hi")
+        });
+    });
+  </script>
+</html>
