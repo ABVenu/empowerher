@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: auto;
+            width: 80%;
+            background-color: beige;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/signup" method="POST" >
+            <input type="text" placeholder="Enter Name" name="username">
+            <input type="password" placeholder="Enter Password" name="password">
+            <input type="file">
+            <input type="submit" value="signup">
+        </form>
+    </div>
+</body>
+</html>
