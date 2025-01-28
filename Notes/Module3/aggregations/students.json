@@ -1,0 +1,22 @@
+[
+  { "firstname": "Alice", "lastname": "Johnson", "age": 18, "gender": "Female", "district": "A", "state": "X", "marks": 85 },
+  { "firstname": "Bob", "lastname": "Smith", "age": 19, "gender": "Male", "district": "B", "state": "X", "marks": 90 },
+  { "firstname": "Charlie", "lastname": "Brown", "age": 20, "gender": "Male", "district": "C", "state": "Y", "marks": 78 },
+  { "firstname": "Diana", "lastname": "Davis", "age": 18, "gender": "Female", "district": "A", "state": "Y", "marks": 92 },
+  { "firstname": "Ella", "lastname": "Wilson", "age": 21, "gender": "Female", "district": "B", "state": "Z", "marks": 87 },
+  { "firstname": "Frank", "lastname": "Miller", "age": 22, "gender": "Male", "district": "C", "state": "Z", "marks": 75 },
+  { "firstname": "Grace", "lastname": "Moore", "age": 19, "gender": "Female", "district": "A", "state": "X", "marks": 88 },
+  { "firstname": "Henry", "lastname": "Taylor", "age": 20, "gender": "Male", "district": "B", "state": "X", "marks": 82 },
+  { "firstname": "Ivy", "lastname": "Anderson", "age": 18, "gender": "Female", "district": "C", "state": "Y", "marks": 91 },
+  { "firstname": "Jack", "lastname": "Thomas", "age": 19, "gender": "Male", "district": "A", "state": "Y", "marks": 84 },
+  { "firstname": "Kevin", "lastname": "Jackson", "age": 21, "gender": "Male", "district": "B", "state": "Z", "marks": 73 },
+  { "firstname": "Laura", "lastname": "White", "age": 22, "gender": "Female", "district": "C", "state": "Z", "marks": 89 },
+  { "firstname": "Mia", "lastname": "Harris", "age": 20, "gender": "Female", "district": "A", "state": "X", "marks": 77 },
+  { "firstname": "Nathan", "lastname": "Martin", "age": 18, "gender": "Male", "district": "B", "state": "X", "marks": 85 },
+  { "firstname": "Olivia", "lastname": "Thompson", "age": 19, "gender": "Female", "district": "C", "state": "Y", "marks": 92 },
+  { "firstname": "Paul", "lastname": "Garcia", "age": 20, "gender": "Male", "district": "A", "state": "Y", "marks": 80 },
+  { "firstname": "Quincy", "lastname": "Martinez", "age": 21, "gender": "Male", "district": "B", "state": "Z", "marks": 86 },
+  { "firstname": "Rita", "lastname": "Robinson", "age": 22, "gender": "Female", "district": "C", "state": "Z", "marks": 88 },
+  { "firstname": "Steve", "lastname": "Clark", "age": 18, "gender": "Male", "district": "A", "state": "X", "marks": 79 },
+  { "firstname": "Tina", "lastname": "Lewis", "age": 19, "gender": "Female", "district": "B", "state": "X", "marks": 90 }
+]
