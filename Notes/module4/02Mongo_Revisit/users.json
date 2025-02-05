@@ -1,0 +1,85 @@
+[
+  {
+    "_id": 1,
+    "name": "Alice",
+    "age": 24,
+    "email": "alice@example.com",
+    "enrolledCourses": [
+      { "courseId": 101, "title": "React Basics", "progress": 80, "rating": 4.5 }
+    ],
+    "joinedAt": "2023-06-12T10:30:00Z"
+  },
+  {
+    "_id": 2,
+    "name": "Bob",
+    "age": 28,
+    "email": "bob@example.com",
+    "enrolledCourses": [
+      { "courseId": 102, "title": "Node.js Fundamentals", "progress": 40, "rating": 4.2 },
+      { "courseId": 103, "title": "MongoDB Deep Dive", "progress": 20, "rating": 4.8 }
+    ],
+    "joinedAt": "2023-07-10T15:45:00Z"
+  },
+  {
+    "_id": 3,
+    "name": "Charlie",
+    "age": 22,
+    "email": "charlie@example.com",
+    "enrolledCourses": [
+      { "courseId": 101, "title": "React Basics", "progress": 90, "rating": 4.7 },
+      { "courseId": 104, "title": "GraphQL Mastery", "progress": 60, "rating": 4.5 }
+    ],
+    "joinedAt": "2023-08-05T12:00:00Z"
+  },
+  {
+    "_id": 4,
+    "name": "David",
+    "age": 30,
+    "email": "david@example.com",
+    "enrolledCourses": [
+      { "courseId": 102, "title": "Node.js Fundamentals", "progress": 75, "rating": 4.0 }
+    ],
+    "joinedAt": "2023-06-25T14:20:00Z"
+  },
+  {
+    "_id": 5,
+    "name": "Eve",
+    "age": 27,
+    "email": "eve@example.com",
+    "enrolledCourses": [
+      { "courseId": 105, "title": "Python for Data Science", "progress": 30, "rating": 4.9 }
+    ],
+    "joinedAt": "2023-05-15T08:00:00Z"
+  },
+  {
+    "_id": 6,
+    "name": "Frank",
+    "age": 26,
+    "email": "frank@example.com",
+    "enrolledCourses": [
+      { "courseId": 101, "title": "React Basics", "progress": 95, "rating": 4.6 }
+    ],
+    "joinedAt": "2023-09-01T16:10:00Z"
+  },
+  {
+    "_id": 7,
+    "name": "Grace",
+    "age": 29,
+    "email": "grace@example.com",
+    "enrolledCourses": [
+      { "courseId": 103, "title": "MongoDB Deep Dive", "progress": 50, "rating": 4.3 },
+      { "courseId": 105, "title": "Python for Data Science", "progress": 80, "rating": 4.7 }
+    ],
+    "joinedAt": "2023-07-30T10:45:00Z"
+  },
+  {
+    "_id": 8,
+    "name": "Henry",
+    "age": 25,
+    "email": "henry@example.com",
+    "enrolledCourses": [
+      { "courseId": 106, "title": "Docker Essentials", "progress": 60, "rating": 4.2 }
+    ],
+    "joinedAt": "2023-09-10T18:30:00Z"
+  }
+]
