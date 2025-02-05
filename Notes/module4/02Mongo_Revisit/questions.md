@@ -13,3 +13,4 @@
 13. Find users who rated any course lower than 4.5
 14. Count how many users are above 25 years old
 15. Get the total number of unique courses enrolled by users
+16. Get users who enrolled in "MongoDB Deep Dive" with progress above 50%
