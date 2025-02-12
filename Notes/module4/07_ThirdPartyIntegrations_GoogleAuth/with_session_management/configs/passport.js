@@ -28,6 +28,17 @@ passport.use(new GoogleStrategy({
         // genrate jwt and send as a response
         token = jwt.sign({ userId: user._id}, 'shhhhh');
     }
-    done(null, {user, token})
+    done(null, user)
   }
 ));
+
+passport.serializeUser((user, done)=>{
+  done(null, user._id)
+
+})
+
+
+passport.deserializeUser(async (id,done)=>{
+  let user = await UserModel.findById(id)
+  done(null, user)
+})
