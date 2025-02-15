@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onClick="logoutFn()">Logout</button>
+    <h2>Welcome to student's page</h2>
+</body>
+<script>
+    function logoutFn(){
+        localStorage.removeItem("lmsloginToken")
+        alert("Moving to Login Page");
+        window.location.href="login.html"
+    }
+    let token = localStorage.getItem("lmsloginToken")
+    if(!token){
+        alert("User Not Logged In");
+        window.location.href="login.html"
+    }
+</script>
+</html>

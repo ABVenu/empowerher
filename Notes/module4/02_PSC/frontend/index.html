@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: auto;
+        background-color: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        width: 60%;
+      }
+      #form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+        color: beige;
+      }
+
+      #msg{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form id="form">
+        <h3>Please Signup</h3>
+        <input id="name" type="text" placeholder="Enter Name" />
+        <input id="email" type="email" placeholder="Enter Email" />
+        <input id="password" type="password" placeholder="Enter Password" />
+        <label for="role">
+          <select id="role">
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="parent">Parent</option>
+            <option value="genuser">Just Explorer</option>
+          </select>
+        </label>
+        <h3 id="msg">  </h3>
+        <input type="submit" value="signup" />
+        <a href="http://localhost:8080/users/forget-password">Forgot Password??</a>
+      </form>
+    </div>
+  </body>
+  <script>
+    let form = document.getElementById("form");
+    form.addEventListener("submit", function () {
+      event.preventDefault();
+      let name = form.name.value;
+      let email = form.email.value;
+      let password = form.password.value;
+      let role = form.role.value;
+      let userObj = { name, email, password, role };
+      console.log(userObj);
+
+      // send the details to the BE
+      fetch("http://localhost:8080/users/signup", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(userObj),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          document.getElementById("msg").textContent = data.msg
+        })
+        .catch((err) => {
+            document.getElementById("msg").textContent = data.msg
+        });
+    });
+  </script>
+</html>

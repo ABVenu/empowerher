@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: auto;
+        background-color: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        width: 60%;
+      }
+      #form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+        color: beige;
+      }
+
+      #msg{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form id="form">
+        <h3>Please Signup</h3>
+        <input id="email" type="email" placeholder="Enter Email" />
+        <input id="password" type="password" placeholder="Enter Password" />
+        <h3 id="msg">  </h3>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+  <script>
+    let form = document.getElementById("form");
+    form.addEventListener("submit", function () {
+      event.preventDefault();
+      let email = form.email.value;
+      let password = form.password.value;
+      let userObj = {email, password };
+      console.log(userObj);
+
+      // send the details to the BE
+      fetch("http://localhost:8080/users/login", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(userObj),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          localStorage.setItem("lmsloginToken", JSON.stringify(data.token))
+          document.getElementById("msg").textContent = data.msg
+          if(data.role=="admin"){
+            window.location.href="admin.html"
+          }else if(data.role=="student"){
+             window.location.href="student.html"
+          }
+        })
+        .catch((err) => {
+            document.getElementById("msg").textContent = data.msg
+        });
+    });
+  </script>
+</html>
