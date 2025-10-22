@@ -1,0 +1,11 @@
+### Module 1 All PDF  Live Notes
+- [Getting Started with JS](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/b7c8dc73-2b16-4ba9-8b70-1ae61afa1d42/ZtAMRLjrmPhJmgH1.pdf)
+- [Array_String](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/eff075d3-e8db-4e19-988c-7612bb7b79fc/uxZbIWrblIzsWACN.pdf)
+- [Objects](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/ea3ae77e-7b45-431f-97da-f8f8708f8b4b/SJnCC1rQGAmVYT2L.pdf)
+- [PSC 01](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/59e0f06f-ff73-4843-a985-d5725b3358e4/aisTaFGjdtl3BDhT.pdf)
+- [2D arrays](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/7a7dd00e-6cdb-4e89-a099-b20410727afe/vnVRKis2VvrMDUaR.pdf)
+- [Functions](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/f2a0ce16-52df-44f8-8e15-3f5f909d2297/sSdfoY0GScayOdOC.pdf)
+- [String-Methods](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/38fabfde-fd6b-433e-8f9e-deee11f71b53/MySFJtDEtq0dGyLy.pdf)
+- [Bruteforce](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/83ccdfcf-c751-4727-8da4-be675963be95/WmV1TNaNzvxiewIv.pdf)
+- [T.C and S.C](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/49395842-10d5-4cdf-8db6-ab27b32ecf23/hqFDHfL2tzQwSxhF.pdf)
+- [Two Pointers](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/3b3276d9-247b-461c-ab26-4b33f3a057b4/RPSAlukgIgcJmzTl.pdf)
