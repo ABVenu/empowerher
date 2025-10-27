@@ -12,3 +12,4 @@
 - [Sliding Window](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/6bbb4a17-1df9-4716-ba21-cd41b76db1fd/miesPULcj10YIcNu.pdf)
 - [Bubble Sort+Selectionsort](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/4719b6f4-e927-4c8e-951d-0ac1b97aef7b/BS02lCCEnFkyGAQ2.pdf)
 - [PSC-Siliding Window + 2 Pointer](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/bfe6f97c-84c5-41dc-bfe4-acede528cb35/elZWgPjzAGdlCkPX.pdf)
+- [Custom-Sorting](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/188db3ce-e7ef-4c69-bc9c-d41c608e4c47/1SYDSuhqwGIoqztp.pdf)
