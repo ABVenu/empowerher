@@ -13,3 +13,4 @@
 - [Bubble Sort+Selectionsort](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/4719b6f4-e927-4c8e-951d-0ac1b97aef7b/BS02lCCEnFkyGAQ2.pdf)
 - [PSC-Siliding Window + 2 Pointer](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/bfe6f97c-84c5-41dc-bfe4-acede528cb35/elZWgPjzAGdlCkPX.pdf)
 - [Custom-Sorting](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/188db3ce-e7ef-4c69-bc9c-d41c608e4c47/1SYDSuhqwGIoqztp.pdf)
+- [stack-1](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/e0665323-b7e7-413c-acd1-2c97270abc02/KMokdrDhkRNutoAD.pdf)
